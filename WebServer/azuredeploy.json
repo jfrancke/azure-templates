@@ -49,7 +49,6 @@
 					{
 						"name": "ipconfig",
 						"properties": {
-							"privateIPAllocationMethod": "Static",
 							"subnet": {
 								"id": "[variables('subnet-id')]"
 							}
