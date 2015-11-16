@@ -39,5 +39,24 @@
 		"vm-nic-name" : "[parameters('vmName')]"
 	},
 	"resources": [
+		{
+			"apiVersion": "2015-05-01-preview",
+			"type": "Microsoft.Network/networkInterfaces",
+			"name": "[variables('vm-nic-name')]",
+			"location": "[resourceGroup().location]",
+			"properties": {
+				"ipConfigurations": [
+					{
+						"name": "ipconfig",
+						"properties": {
+							"privateIPAllocationMethod": "Static",
+							"subnet": {
+								"id": "[variables('subnet-id')]"
+							}
+						}
+					}
+				]
+			}
+		}
 	]
 }
