@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Domain-joined Webserver",
+  "description": "Template for creating a new domain-joined server that has IIS enabled",
+  "summary": "Deploys a new domain-joined server with IIS enabled",
+  "githubUsername": "jfrancke",
+  "dateUpdated": "2015-11-16"
+}
