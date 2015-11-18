@@ -82,18 +82,18 @@
 						"version": "latest"
 					},
 					"osDisk": {
-						"name": "osdisk",
+						"name": "[parameters('vmName')]",
 						"vhd": {
-							"uri": "[concat('http://',variables('storageAccountName'),'.blob.core.windows.net/vhds/',parameters('vmName'),'-osdisk.vhd')]"
+							"uri": "[concat('https://',variables('storageAccountName'),'.blob.core.windows.net/vhds/',parameters('vmName'),'-osdisk.vhd')]"
 						},
 						"caching": "ReadWrite",
 						"createOption": "FromImage"
 					},
 					"dataDisks": [
 						{
-							"name": "vm-data-disk1",
+							"name": "[concat(parameters('vmName'),'-datadisk-1')]",
 							"vhd": {
-								"uri": "[concat('http://',variables('storageAccountName'),'.blob.core.windows.net/vhds/',parameters('vmName'),'-datadisk-1.vhd')]"
+								"uri": "[concat('https://',variables('storageAccountName'),'.blob.core.windows.net/vhds/',parameters('vmName'),'-datadisk-1.vhd')]"
 							},
 							"caching": "None",
 							"createOption": "Empty",
